@@ -28,6 +28,18 @@ const headers = {
     'Content-Type': 'application/json'
 };
 
+app.get('/', async (req, res) => {
+    try {
+        const resp = await axios.get(BASE_URL, {
+            headers,
+            params: { properties: PROPERTIES.join(',') }
+        });
+        res.json(resp.data.results);
+    } catch (error) {
+        console.error(error.response ? error.response.data : error.message);
+    }
+});
+
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
 
 // * Code for Route 2 goes here
