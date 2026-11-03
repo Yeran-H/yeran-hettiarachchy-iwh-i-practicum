@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/') Return to the homepage
+    form(action='/update-cobj', method='POST')
+      label(for='dealname') Deal Name
+      input#dealname(type='text', name='dealname', required)
+      label(for='project_type') Project Type
+      input#project_type(type='text', name='project_type')
+      label(for='notes') Notes
+      textarea#notes(name='notes', rows='4')
+      input(type='submit', value='Create')
