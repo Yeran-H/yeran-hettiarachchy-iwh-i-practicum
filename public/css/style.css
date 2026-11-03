@@ -1,58 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #33475b;
+    background-color: #f5f8fa;
 }
 
 h1 {
-    margin: 1rem;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
 
-.cards {
+a {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #0091ae;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Homepage table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid #cbd6e2;
+}
+
+th {
+    background-color: #ff7a59;
+    color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f5f8fa;
+}
+
+/* Form page */
+form {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cbd6e2;
+    border-radius: 4px;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+label {
+    font-weight: bold;
 }
 
-.card__email {
-    font-size: 1rem;
-}
-
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
-}
-
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
-}
-
-input[type="text"] {
-    padding: .25rem;
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #cbd6e2;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
     margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #ff7a59;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e8684a;
 }
