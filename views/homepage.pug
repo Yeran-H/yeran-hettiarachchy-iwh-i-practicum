@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1= title
+    a(href='/update-cobj') Add to this
+    table
+      thead
+        tr
+          each label in labels
+            th= label
+      tbody
+        each record in records
+          tr
+            each prop in properties
+              td= record.properties[prop]

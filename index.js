@@ -34,7 +34,12 @@ app.get('/', async (req, res) => {
             headers,
             params: { properties: PROPERTIES.join(',') }
         });
-        res.json(resp.data.results);
+               res.render('homepage', {
+            title: 'Deals | Integrating With HubSpot I Practicum',
+            records: resp.data.results,
+            properties: PROPERTIES,
+            labels: ['Deal Name', 'Project Type', 'Notes']
+        });
     } catch (error) {
         console.error(error.response ? error.response.data : error.message);
     }
